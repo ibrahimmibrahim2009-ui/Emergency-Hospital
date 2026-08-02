@@ -1,0 +1,64 @@
+:root {
+  --light-blue: #1a7bd1;
+  --dark-grey: #2c2d3f;
+  --light-grey: #757575;
+  --bg-white: #f6f6f6;
+  --bg-newsletter: #edf2ff;
+}
+/* Start Global RUles */
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+body {
+  font-family: "Poppins", sans-serif;
+}
+ul {
+  list-style: none;
+  margin: 0;
+}
+a {
+  text-decoration: none;
+}
+input:focus,
+textarea:focus  {
+  outline: none;
+}
+h1,
+h2,
+h3 {
+  color: var(--dark-grey);
+}
+h2,
+h3 {
+  font-weight: 600;
+}
+p {
+  font-size: 14px;
+  color: var(--light-grey);
+}
+.container {
+  padding: 0 15px;
+  margin-right: auto;
+  margin-left: auto;
+}
+/* Small */
+@media (min-width: 768px) {
+  .container {
+    width: 750px;
+  }
+}
+/* Medium */
+@media (min-width: 992px) {
+  .container {
+    width: 970px;
+  }
+}
+/* Large */
+@media (min-width: 1200px) {
+  .container {
+    width: 1170px;
+  }
+}
+/* End Global Rules */
