@@ -4,6 +4,7 @@
   --light-grey: #757575;
   --bg-white: #f6f6f6;
   --bg-newsletter: #edf2ff;
+  --main-transition: .3s;
 }
 /* Start Global RUles */
 * {
@@ -62,3 +63,57 @@ p {
   }
 }
 /* End Global Rules */
+/* Start Work */
+/* Home */
+#home {
+  background-color: white;
+}
+#home nav {
+  position: fixed;
+  top: 0;
+  width: 100%;
+  background-color: white;
+  box-shadow: 0px 1px 5px rgba(0, 0, 0, 0.2);
+}
+#home nav .container {
+  min-height: 100px;
+}
+#home nav .logo {
+  width: 250px;
+}
+#home nav ul {
+
+}
+#home nav ul li a {
+  margin: 0 15px;
+  color: var(--dark-grey);
+  font-weight: 500;
+  transition: var(--main-transition);
+}
+#home nav ul li a:hover {
+  color: var(--light-blue);
+}
+#home .home-content {
+  background-image: url(../images/bg-home.jpg);
+  background-size: cover;
+  min-height: 100vh;
+  margin-top: 2rem;
+}
+#home .home-content .col small img {
+  vertical-align: middle;
+}
+#home .home-content .col h1 {
+  max-width: 600px;
+  line-height: 1.4;
+}
+#home .home-content .col p {
+  max-width: 500px;
+  line-height: 1.6;
+}
+#home .home-content .col .primary:hover {
+  background-color: #135fa1;
+}
+#home .home-content .col .secondary:hover {
+  background-color: #4c4f6e;
+}
+/* End Work */
