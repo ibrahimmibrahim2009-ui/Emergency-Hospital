@@ -81,8 +81,10 @@ p {
 #home nav .logo {
   width: 250px;
 }
-#home nav ul {
-
+@media (min-width: 992px) {
+  #home nav .links i {
+    display: none;
+  }
 }
 #home nav ul li a {
   margin: 0 15px;
@@ -93,6 +95,8 @@ p {
 #home nav ul li a:hover {
   color: var(--light-blue);
 }
+
+
 #home .home-content {
   background-image: url(../images/bg-home.jpg);
   background-size: cover;
@@ -106,6 +110,11 @@ p {
   max-width: 600px;
   line-height: 1.4;
 }
+@media (max-width: 767px) {
+  #home .home-content .col h1 {
+    font-size: 30px;
+  }
+}
 #home .home-content .col p {
   max-width: 500px;
   line-height: 1.6;
@@ -115,5 +124,40 @@ p {
 }
 #home .home-content .col .secondary:hover {
   background-color: #4c4f6e;
+}
+@media (max-width: 991px) {
+  #home nav .links ul {
+    position: absolute;
+    right: 0;
+    top: calc(200%);
+    padding: 0;
+    background-color: white;
+    opacity: 0;
+    min-width: 180px;
+    box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.2);
+    transition: var(--main-transition);
+    z-index: 1;
+  }
+  #home nav .links ul li a {
+    display: block;
+    padding: 15px;
+    margin: 0;
+    transition: var(--main-transition);
+  }
+  #home nav .links ul a:hover {
+    padding-left: 25px
+  }
+  #home nav .links ul li:not(:last-child) a {
+    border-bottom: 1px solid #ddd;
+  }
+  #home nav .links i {
+    font-size: 30px;
+    color: var(--dark-grey);
+  }
+  #home nav .links:hover ul {
+    flex-direction: column;
+    opacity: 1;
+    top: calc(100%);
+  }
 }
 /* End Work */
