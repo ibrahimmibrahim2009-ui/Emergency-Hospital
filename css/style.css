@@ -367,10 +367,23 @@ p {
   max-width: 600px;
   margin: auto;
 }
+@media (max-width: 767px) {
+  #call .call-content {
+    padding: 0 10px
+  }
+  #call .call-content h2 {
+    font-size: 25px;
+  }
+}
 #call .call-content p {
   margin: 25px 0;
   line-height: 1.6;
   font-size: 16px;
+}
+@media (max-width: 767px) {
+  #call .call-content p {
+    font-size: 14px;
+  }
 }
 #call .call-content a {
   margin-right: 20px;
@@ -397,6 +410,32 @@ p {
   transition: var(--main-transition);
 }
 /* End Call */
+/* Strat Services */
+#services {
+  padding: var(--section-padding) 0;
+
+}
+#services .content {
+  margin-top: 5rem;
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+  gap: 3rem 4rem;
+}
+@media (max-width: 767px) {
+  #services .content {
+    grid-template-columns: minmax(200px, 1fr);
+  }
+}
+#services .box i {
+  font-size: 40px;
+  margin-right: 20px;
+  color: var(--light-blue);
+}
+#services .box h3 {
+  font-size: 20px;
+  margin-bottom: 10px;
+}
+/* End Services */
 @keyframes move-up {
   0%,
   100%{
