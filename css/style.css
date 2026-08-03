@@ -59,6 +59,22 @@ p {
   margin: auto;
   max-width: 500px;
 }
+.primary {
+  background-color: var(--light-blue);
+  color: #fff;
+  transition: var(--main-transition);
+}
+.primary:hover {
+  background-color: #135fa1;
+}
+.secondary {
+  background-color: var(--dark-grey);
+  color: #fff;
+  transition: var(--main-transition);
+}
+.secondary:hover {
+  background-color: #4c4f6e;
+}
 .container {
   padding: 0 15px;
   margin-right: auto;
@@ -139,12 +155,6 @@ p {
 #home .home-content .col p {
   max-width: 500px;
   line-height: 1.6;
-}
-#home .home-content .col .primary:hover {
-  background-color: #135fa1;
-}
-#home .home-content .col .secondary:hover {
-  background-color: #4c4f6e;
 }
 @media (max-width: 991px) {
   #home nav .links ul {
@@ -345,14 +355,14 @@ p {
   }
 }
 /* End Help */
-/* Start Call */
-#call {
-  background: url(../images/call-bg.jpg) center center/ cover;
+/* Start contact */
+#contact {
+  background: url(../images/contact-bg.jpg) center center/ cover;
   padding: var(--section-padding) 0;
   position: relative;
   z-index: 1;
 }
-#call::before {
+#contact::before {
   content: '';
   position: absolute;
   top: 0;
@@ -363,53 +373,53 @@ p {
   opacity: 0.8;
   z-index: -1;
 }
-#call .call-content {
+#contact .contact-content {
   max-width: 600px;
   margin: auto;
 }
 @media (max-width: 767px) {
-  #call .call-content {
+  #contact .contact-content {
     padding: 0 10px
   }
-  #call .call-content h2 {
+  #contact .contact-content h2 {
     font-size: 25px;
   }
 }
-#call .call-content p {
+#contact .contact-content p {
   margin: 25px 0;
   line-height: 1.6;
   font-size: 16px;
 }
 @media (max-width: 767px) {
-  #call .call-content p {
+  #contact .contact-content p {
     font-size: 14px;
   }
 }
-#call .call-content a {
+#contact .contact-content a {
   margin-right: 20px;
 }
-#call .call-content a.third {
+#contact .contact-content a.third {
   border: 1px solid #fff;
 }
-#call .call-content a.third:hover {
+#contact .contact-content a.third:hover {
   background-color: var(--light-blue);
   color: #fff;
 }
-#call .call-content a.fourth {
+#contact .contact-content a.fourth {
     border: 1px solid #fff;
 }
-#call .call-content a.fourth:hover {
+#contact .contact-content a.fourth:hover {
   color: var(--dark-grey);
   background-color: #fff;
 }
-#call .call-content a i {
+#contact .contact-content a i {
 
 }
-#call .call-content a.fourth:hover i {
+#contact .contact-content a.fourth:hover i {
   animation: move-right .8s linear infinite;
   transition: var(--main-transition);
 }
-/* End Call */
+/* End contact */
 /* Strat Services */
 #services {
   padding: var(--section-padding) 0;
@@ -436,6 +446,68 @@ p {
   margin-bottom: 10px;
 }
 /* End Services */
+/* Start Prices */
+#price {
+  background-color: var(--bg-white);
+  padding: var(--section-padding) 0;
+}
+#price .container .price-content {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+  gap: 2rem;
+  margin-top: 5rem;
+}
+@media (max-width: 767px) {
+  #price .container .price-content {
+    grid-template-columns: minmax(200px, 1fr);
+  }
+}
+#price .card {
+  background-color: #fff;
+  padding: 3rem 2rem;
+  border: 1px solid #ddd;
+  transition: var(--main-transition);
+}
+#price .card:hover {
+  transform: translateY(-5px);
+  box-shadow: 3px 4px 5px rgba(0, 0, 0, 0.2);
+}
+#price .card > i {
+  font-size: 60px;
+  color: var(--light-blue);
+} 
+#price .card > h3 {
+  font-size: 24px;
+  margin: 2rem 0 .5rem;
+  font-weight: 500;
+}
+#price .card > p {
+  font-size: 35px;
+  color: var(--light-blue);
+  font-weight: 600;
+}
+#price .card > p span {
+  color: var(--light-grey);
+  font-size: 16px;
+  font-weight: 400;
+}
+#price .card ul {
+  margin-top: 2rem;
+}
+#price .card ul li {
+  margin: 15px 0;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  color: var(--light-grey);
+}
+#price .card ul li span {
+  font-size: 16px;
+}
+#price .card ul li i.yes {
+  color: var(--light-blue)
+}
+/* End Prices */
 @keyframes move-up {
   0%,
   100%{
