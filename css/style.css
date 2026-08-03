@@ -265,15 +265,30 @@ p {
   background-color: #fff;
   color: var(--light-blue);
 }
-#info .container .box i {
-  font-size: 30px;
-  padding: 20px;
+#info .container .box .icon {
   width: 80px;
   height: 80px;
-  border: 2px solid white;
-  border-radius: 50%;
+  font-size: 30px;
   margin-right: 20px;
+  position: relative;
+}
+#info .container .box .icon::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  border: 2px solid #fff;
+  border-radius: 50%;
+  padding: 2px;
+  -webkit-mask: conic-gradient(#fff 0deg 320deg, transparent 320deg 360deg);
+  mask: conic-gradient(#fff 0deg 320deg, transparent 320deg 360deg);
+  animation: spin 1.2s linear infinite;
+}
+#info .container .box i {
+  padding: 20px;
   transition: var(--main-transition);
+  width: 80px;
+  height: 80px;
+  border-radius: 50%;
 }
 #info .container .box span {
   font-size: 30px;
@@ -336,5 +351,13 @@ p {
   }
   50% {
     top: -5px;
+  }
+}
+@keyframes spin {
+  0 {
+    transform: rotate(0);
+  }
+  100% {
+    transform: rotate(360deg);
   }
 }
