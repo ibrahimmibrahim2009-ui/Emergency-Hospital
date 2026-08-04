@@ -247,7 +247,7 @@ p {
 /* End About */
 /* Start Info */
 #info,
-#contact,
+#call,
 #brand {
   padding: var(--section-padding) 0;
   position: relative;
@@ -258,7 +258,7 @@ p {
     background: url(../images/info-bg.jpg) center center/ cover;
 }
 #info::before,
-#contact::before,
+#call::before,
 #brand::before  {
   content: '';
   position: absolute;
@@ -362,57 +362,57 @@ p {
   }
 }
 /* End Help */
-/* Start contact */
-#contact {
+/* Start Call */
+#call {
   background: url(../images/call-bg.jpg) no-repeat center center/ cover;
 }
-#contact .contact-content {
+#call .call-content {
   max-width: 600px;
   margin: auto;
 }
 @media (max-width: 767px) {
-  #contact .contact-content {
+  #call .call-content {
     padding: 0 10px
   }
-  #contact .contact-content h2 {
+  #call .call-content h2 {
     font-size: 25px;
   }
 }
-#contact .contact-content p {
+#call .call-content p {
   margin: 25px 0;
   line-height: 1.6;
   font-size: 16px;
 }
 @media (max-width: 767px) {
-  #contact .contact-content p {
+  #call .call-content p {
     font-size: 14px;
   }
 }
-#contact .contact-content a {
+#call .call-content a {
   margin-right: 20px;
 }
-#contact .contact-content a.third {
+#call .call-content a.third {
   border: 1px solid #fff;
 }
-#contact .contact-content a.third:hover {
+#call .call-content a.third:hover {
   background-color: var(--light-blue);
   color: #fff;
 }
-#contact .contact-content a.fourth {
+#call .call-content a.fourth {
     border: 1px solid #fff;
 }
-#contact .contact-content a.fourth:hover {
+#call .call-content a.fourth:hover {
   color: var(--dark-grey);
   background-color: #fff;
 }
-#contact .contact-content a i {
+#call .call-content a i {
 
 }
-#contact .contact-content a.fourth:hover i {
+#call .call-content a.fourth:hover i {
   animation: move-right .8s linear infinite;
   transition: var(--main-transition);
 }
-/* End contact */
+/* End Call */
 /* Strat Services */
 #services {
   padding: var(--section-padding) 0;
@@ -596,6 +596,63 @@ p {
   padding: 5px 15px;
 }
 /* End Blogs */
+/* Start Contact */
+#contact {
+  background-color: var(--bg-white);
+  padding: var(--section-padding) 0;
+}
+#contact .container .contact-content {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, 1fr);
+  align-items: center;
+  gap: 3rem;
+  margin-top: 6rem;
+}
+@media (max-width: 1199px) {
+  #contact .container .contact-content > img {
+    display: none;
+  }
+}
+@media (max-width: 767px) {
+  #contact .container .contact-content {
+    grid-template-columns: minmax(200px, 1fr);
+  }
+}
+#contact form .form-control {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 1.5rem;
+  margin-bottom: 20px;
+  width: 100%;
+}
+@media (max-width: 767px) {
+  #contact form .form-control {
+    grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+  }
+}
+#contact form .form-control input,
+#contact form .form-control select,
+#contact form textarea {
+  padding: 15px;
+  width: 100%;
+  color: var(--light-grey);
+  outline-color: var(--light-blue);
+  border: 1px solid #ddd;
+}
+#contact form textarea {
+  resize: none;
+}
+#contact form button {
+  padding: 15px 30px;
+  border: none;
+  margin-top: 25px;
+
+}
+#contact .contact-content > img {
+  justify-self: flex-end;
+  max-width: 100%;
+}
+/* End Contact */
 @keyframes move-up {
   0%,
   100%{
