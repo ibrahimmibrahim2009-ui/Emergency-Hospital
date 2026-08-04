@@ -603,19 +603,17 @@ p {
 }
 #contact .container .contact-content {
   display: grid;
-  grid-template-columns: repeat(auto-fill, 1fr);
+  grid-template-columns: repeat(2, 1fr);
   align-items: center;
   gap: 3rem;
   margin-top: 6rem;
 }
 @media (max-width: 1199px) {
+  #contact .container .contact-content {
+    grid-template-columns: 1fr
+  }
   #contact .container .contact-content > img {
     display: none;
-  }
-}
-@media (max-width: 767px) {
-  #contact .container .contact-content {
-    grid-template-columns: minmax(200px, 1fr);
   }
 }
 #contact form .form-control {
@@ -627,7 +625,7 @@ p {
 }
 @media (max-width: 767px) {
   #contact form .form-control {
-    grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+    grid-template-columns: 1fr;
   }
 }
 #contact form .form-control input,
