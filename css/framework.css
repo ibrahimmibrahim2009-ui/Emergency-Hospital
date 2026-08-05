@@ -66,7 +66,7 @@ align-s {
   display: grid;
 }
 .gap-20 {
-  gap: 20px
+  gap: 20px;
 }
 /* Start Position */
 .p-relative {
@@ -122,7 +122,7 @@ align-s {
   margin-right: auto;
 }
 .m-0 {
-  margin: 0
+  margin: 0;
 }
 .m-20 {
   margin: 20px;
@@ -144,6 +144,9 @@ align-s {
 }
 .mt-25 {
   margin-top: 25px;
+}
+.mt-30 {
+  margin-top: 30px;
 }
 .mt-40 {
   margin-top: 40px;
@@ -335,7 +338,7 @@ align-s {
 }
 .h-centering {
   left: 50%;
-  transform: translatex(-50%); 
+  transform: translatex(-50%);
 }
 .btn-shape {
   display: inline-block;
@@ -343,8 +346,8 @@ align-s {
   font-size: 14px;
   font-weight: 500;
   cursor: pointer;
-  border-radius: 5px; 
-  transition: all .3s ease;
+  border-radius: 5px;
+  transition: all 0.3s ease;
 }
 .section-format {
   border-radius: 10px;
@@ -356,5 +359,3 @@ align-s {
   background-color: white;
   padding: 10px;
 }
-
-
